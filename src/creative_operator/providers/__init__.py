@@ -23,7 +23,7 @@ __all__ = [
     "build_provider",
 ]
 
-PROVIDERS = ("omni", "mock", "manual")
+PROVIDERS = ("omni", "replicate", "mock", "manual")
 
 
 def build_provider(name: str, *, model: str, clips: list[Path] | None = None) -> VideoProvider:
@@ -32,6 +32,10 @@ def build_provider(name: str, *, model: str, clips: list[Path] | None = None) ->
         from .omni import OmniProvider
 
         return OmniProvider(model=model)
+    if name == "replicate":
+        from .replicate import ReplicateProvider
+
+        return ReplicateProvider()  # model comes from REPLICATE_MODEL
     if name == "mock":
         from .mock import MockProvider
 

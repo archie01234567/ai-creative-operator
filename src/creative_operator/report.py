@@ -116,6 +116,7 @@ def write_report(job: Job, job_dir: Path) -> Path:
             f"<h2>Storyboard: {e(sb.title)} ({sb.total_seconds}s)</h2>"
             f"<div class='card'><b>Protagonist:</b> {e(sb.protagonist)}<br>"
             f"<b>Look:</b> {e(sb.visual_style)}<br><b>Opening caption:</b> {e(sb.hook_super)}<br>"
+            f"<b>Benefit caption (shot {sb.benefit_shot}):</b> {e(sb.benefit_super)}<br>"
             f"<b>End card:</b> {e(sb.end_card_headline)} · {e(sb.end_card_cta)}</div>"
             "<div class='card'><table><tr><th>#</th><th>s</th><th>What happens</th>"
             "<th>Camera</th></tr>"

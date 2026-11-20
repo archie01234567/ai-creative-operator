@@ -33,6 +33,8 @@
     }
   ],
   "hook_super": "Flight cancelled. She's fine.",
+  "benefit_super": "Rebooked. Hotel covered.",
+  "benefit_shot": 3,
   "end_card_headline": "Protected when things go wrong.",
   "end_card_cta": "Travel protected"
 }

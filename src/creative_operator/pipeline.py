@@ -72,13 +72,16 @@ class Pipeline:
         self._log(job, "Job created.")
         return job
 
-    def run(self, job_id: str) -> Job:
+    def run(self, job_id: str, new_take: bool = False) -> Job:
         """Drive a job to a terminal state. Safe to call again on any non-finalized job."""
         job = self.store.load(job_id)
         if job.state == JobState.FINALIZED:
             return job
         if job.state.terminal:
-            self._reopen(job)
+            self._reopen(job, new_take)
+        if job.provider != self.provider.name:  # resumed with a different provider
+            self._log(job, f"Provider changed: {job.provider} -> {self.provider.name}.")
+            job.provider = self.provider.name
 
         stages = {
             JobState.CREATED: self._start,
@@ -200,7 +203,11 @@ class Pipeline:
         attempt = task.attempts[-1]
         status = self.provider.get_status(attempt.provider_job_id)
         if status.state == ProviderState.SUCCEEDED:
-            path = self.provider.get_result(attempt.provider_job_id)
+            try:
+                path = self.provider.get_result(attempt.provider_job_id)
+            except ProviderError as e:  # e.g. the download failed
+                self._attempt_failed(job, task, e)
+                return
             try:
                 media.probe(path)  # a "successful" job can still hand back a broken file
             except StageError as e:
@@ -264,13 +271,22 @@ class Pipeline:
             size, s.font_path,
         )  # fmt: skip
         final = job_dir / f"final_round{job.qa_round}.mp4"
+        # The hook is on screen from the very first frame: that frame is the thumbnail.
+        overlays = [media.Overlay(hook, 0.0, s.hook_super_seconds, fade=0.25, fade_in=0)]
+        card_start = max(total - s.end_card_seconds, 0.0)
+        if sb.benefit_super and 1 <= sb.benefit_shot <= len(sb.scenes):
+            start = float(sum(sc.duration for sc in sb.scenes[: sb.benefit_shot - 1])) + 0.4
+            end = min(start + 2.6, card_start - 0.2)
+            if end - start >= 1.2:  # long enough to read
+                benefit = media.render_hook_super(
+                    sb.benefit_super, job_dir / "benefit.png", size, s.font_path
+                )
+                overlays.append(media.Overlay(benefit, start, end, fade=0.25))
+        overlays.append(media.Overlay(card, card_start, total))
         media.assemble(
             clips,
             final,
-            [
-                media.Overlay(hook, 0.0, s.hook_super_seconds, fade=0.25),
-                media.Overlay(card, max(total - s.end_card_seconds, 0.0), total),
-            ],
+            overlays,
             size=size,
             fps=s.fps,
         )
@@ -311,9 +327,16 @@ class Pipeline:
 
     # ------------------------------------------------------------------ helpers
 
-    def _reopen(self, job: Job) -> None:
+    def _reopen(self, job: Job, new_take: bool = False) -> None:
         """Resume a FAILED / NEEDS_REVIEW job from the stage that makes sense for its data."""
-        if job.state == JobState.NEEDS_REVIEW:
+        if job.state == JobState.NEEDS_REVIEW and new_take:
+            # A human reviewed the rejected asset and is supplying a different take.
+            job.qa_round += 1
+            for task in job.tasks:
+                task.status, task.attempts, task.not_before = TaskStatus.PENDING, [], None
+                task.output_path = None
+            target = JobState.GENERATING
+        elif job.state == JobState.NEEDS_REVIEW:
             target = JobState.EVALUATING
         elif job.error:
             target = job.error.stage

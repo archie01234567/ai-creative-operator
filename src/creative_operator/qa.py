@@ -47,7 +47,12 @@ a paid campaign with minor flaws; 5-6 is noticeably AI or off-brief; below 5 is 
 A normal viewer spotting one obvious AI artifact caps realism at 6. Be strict: a wrongly
 approved ad costs media spend, a wrongly rejected one costs a re-render.
 
-You only see stills, so do not credit or penalise motion or audio."""
+You only see stills, so do not credit or penalise motion or audio.
+
+`fix_suggestions` are pasted into the next video prompt, so each one must describe what the
+camera should see in the filmed footage. The video model cannot render words: never suggest
+readable screens, signs, notifications or captions, and do not put caption or brand-card
+changes there. Report problems with the post-production captions under `observed_defects`."""
 
 
 def technical_qa(video: Path, brief: Brief) -> TechnicalQA:
@@ -106,13 +111,23 @@ def technical_qa(video: Path, brief: Brief) -> TechnicalQA:
     return report
 
 
-def sample_times(duration: float) -> list[float]:
-    """Dense in the first two seconds (the hook), then evenly spaced to the end."""
+def sample_times(duration: float, also: tuple[float, ...] = ()) -> list[float]:
+    """Dense in the first two seconds (the hook), then evenly spaced to the end.
+
+    `also` adds moments that must be seen, such as the frame carrying the benefit caption.
+    """
     hook = [t for t in (0.1, 0.8, 1.8) if t < duration]
     rest_start, rest_end = 3.0, max(duration - 0.4, 3.0)
     steps = 5
     rest = [rest_start + i * (rest_end - rest_start) / (steps - 1) for i in range(steps)]
-    return hook + [round(t, 2) for t in rest if t < duration]
+    times = hook + [round(t, 2) for t in rest] + [round(t, 2) for t in also]
+    return sorted({t for t in times if 0 <= t < duration})
+
+
+def _benefit_moment(storyboard: Storyboard) -> tuple[float, ...]:
+    if not storyboard.benefit_super or not 1 <= storyboard.benefit_shot <= len(storyboard.scenes):
+        return ()
+    return (sum(s.duration for s in storyboard.scenes[: storyboard.benefit_shot - 1]) + 1.5,)
 
 
 def creative_qa(
@@ -130,7 +145,7 @@ def creative_qa(
         duration = probe(video).duration
         frames = [
             (t, extract_frame(video, t, frames_dir / f"frame_{i:02d}_{t:05.2f}s.jpg"))
-            for i, t in enumerate(sample_times(duration))
+            for i, t in enumerate(sample_times(duration, _benefit_moment(storyboard)))
         ]
     except MediaError as e:
         return CreativeQA(skipped_reason=f"Could not sample frames: {e.message}")
@@ -144,8 +159,10 @@ def creative_qa(
         f"INTENDED CONCEPT: {angle.concept}\n"
         f"INTENDED HOOK: {angle.hook}\n"
         f"INTENDED PROTAGONIST: {storyboard.protagonist}\n"
-        f"The opening caption and closing brand card were added in post-production; judge "
-        f"whether they are legible and well placed.\n\n"
+        f"Added in post-production: the opening caption, a mid-spot caption that names what "
+        f"the product did for her ('{storyboard.benefit_super}'), and the closing brand card. "
+        f"The product is a service and cannot be filmed, so that caption is how its benefit "
+        f"is shown. Judge whether these are legible, well placed and make the story clear.\n\n"
         f"Review the {len(frames)} frames above and fill in the report."
     )
     try:

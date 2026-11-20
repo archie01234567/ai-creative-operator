@@ -184,7 +184,12 @@ def _text_block(img: Image.Image, lines: list[str], font, top: int, fill, gap: f
 def render_hook_super(text: str, out: Path, size: tuple[int, int], font_path: str | None) -> Path:
     """Opening caption, placed below the platform's top UI and above the centre of frame."""
     w, h = size
-    img = Image.new("RGBA", size, (0, 0, 0, 0))
+    # A soft dark gradient over the top 38% keeps white type readable on bright footage
+    # (windows, sky) without boxing it in.
+    scrim = Image.new("RGBA", (1, h), (0, 0, 0, 0))
+    for y in range(int(h * 0.38)):
+        scrim.putpixel((0, y), (6, 12, 24, int(215 * (1 - y / (h * 0.38)) ** 0.55)))
+    img = scrim.resize(size)
     font = _font(int(w * 0.082), font_path)
     lines = _wrap(ImageDraw.Draw(img), text, font, int(w * 0.84))
     _text_block(img, lines, font, int(h * 0.15), (255, 255, 255, 255))
@@ -204,7 +209,7 @@ def render_end_card(
     scrim = Image.new("RGBA", (1, h))
     for y in range(h):  # heavier towards the middle band where the text sits
         t = 1 - abs((y / h) - 0.5) * 1.3
-        scrim.putpixel((0, y), (8, 18, 38, int(215 * max(0.45, min(1.0, t)))))
+        scrim.putpixel((0, y), (8, 18, 38, int(185 * max(0.45, min(1.0, t)))))
     img = scrim.resize(size)
     draw = ImageDraw.Draw(img)
 
@@ -241,6 +246,7 @@ class Overlay:
     start: float
     end: float
     fade: float = 0.35
+    fade_in: float | None = None  # defaults to `fade`; 0 means fully visible from frame one
 
 
 def assemble(
@@ -289,7 +295,8 @@ def assemble(
         index = n + j
         end = min(overlay.end, total)
         inputs += ["-loop", "1", "-t", f"{total:.3f}", "-i", str(overlay.image)]
-        fades = f"fade=t=in:st={overlay.start:.2f}:d={overlay.fade}:alpha=1"
+        fade_in = overlay.fade if overlay.fade_in is None else overlay.fade_in
+        fades = f"fade=t=in:st={overlay.start:.2f}:d={fade_in}:alpha=1" if fade_in > 0 else "null"
         if end < total - 0.05:  # an overlay that runs to the last frame should not fade out
             fades += f",fade=t=out:st={end - overlay.fade:.2f}:d={overlay.fade}:alpha=1"
         filters.append(f"[{index}:v]format=rgba,{fades}[ov{j}]")

@@ -109,4 +109,7 @@ def _single_take_prompt(sb: Storyboard) -> str:
 def _feedback_block(feedback: list[str]) -> str:
     if not feedback:
         return ""
-    return "\nFix these problems seen in the previous render:\n- " + "\n- ".join(feedback)
+    return (
+        "\nNotes from the review of the previous render. Fix them in the footage itself; "
+        "still render no text, captions or readable screens:\n- " + "\n- ".join(feedback)
+    )

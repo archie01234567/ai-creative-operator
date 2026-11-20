@@ -25,8 +25,9 @@ model and watched mostly with sound off by people who did not ask to see it.
 Judge ideas the way a media buyer would: the first two seconds decide everything, one idea
 per ad, the product's benefit must be visible rather than explained, and the story must
 survive with no audio. Be honest about what AI video cannot do well today: legible text,
-phone/app screens, logos, fine hand actions and crowds all tend to break realism, so an
-idea that depends on them is a weaker idea no matter how clever it is.
+phone/app screens, logos, fine hand actions, crowds, split screens and any shot that needs
+the same person twice in one frame all tend to break realism, so an idea that depends on
+them is a weaker idea no matter how clever it is.
 
 Propose angles that are genuinely different from each other (different emotion and different
 opening image), score each one candidly, then pick one. Keep every field short."""
@@ -43,7 +44,16 @@ Rules for the video prompts:
 - Never ask for on-screen text, captions, readable signs, logos, UI or the brand name. The
   brand card and captions are added in post where they can be rendered perfectly.
 - Keep actions simple and physically plausible for a few seconds of footage.
-- End on a calm, uncluttered composition: the closing brand card is overlaid on it.
+- One person, one frame: no split screens, composites, mirrors or duplicated subjects.
+- The opening shot must show the problem in body language a stranger reads in one second
+  (posture, face, gesture), not in a sign or a screen.
+- The product cannot be filmed, so make its effect visible: the protagonist's situation
+  changes on camera in the turn shot (she stops, reads her phone, her shoulders drop, she
+  walks the other way). `benefit_super` is the short caption added in post over that shot
+  that names what just happened for her; set `benefit_shot` to that shot's number.
+- Wardrobe and props never change: nobody takes a coat off, gains a bag or loses one.
+- Prefer slow, simple camera moves and keep the face sharp; fast motion smears.
+- End on a calm, bright, uncluttered composition: the closing brand card is overlaid on it.
 - `protagonist` and `visual_style` are pasted into every shot, so write them once, precisely."""
 
 
@@ -113,6 +123,12 @@ def validate_storyboard(sb: Storyboard, brief: Brief) -> list[str]:
         problems.append("the opening shot must be 3s or shorter")
     if len(sb.hook_super.split()) > 6:
         problems.append("hook_super must be 6 words or fewer")
+    if not sb.benefit_super.strip():
+        problems.append("benefit_super is required: the caption that names what the product did")
+    elif len(sb.benefit_super.split()) > 6:
+        problems.append("benefit_super must be 6 words or fewer")
+    if not 2 <= sb.benefit_shot <= len(sb.scenes):
+        problems.append("benefit_shot must be the number of the turn shot (2 or later)")
     if len(sb.end_card_headline.split()) > 7:
         problems.append("end_card_headline must be 7 words or fewer")
     if len(sb.end_card_cta.split()) > 4:

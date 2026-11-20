@@ -86,6 +86,14 @@ class Storyboard(BaseModel):
     )
     scenes: list[Scene]
     hook_super: str = Field(description="<=6 word caption burned over the opening shot.")
+    benefit_super: str = Field(
+        default="",
+        description="<=6 word caption over the turn shot saying what the product just did "
+        "for the protagonist, e.g. 'Rebooked. Hotel covered.'",
+    )
+    benefit_shot: int = Field(
+        default=0, description="1-based number of the shot the benefit caption sits on."
+    )
     end_card_headline: str = Field(description="<=7 word line on the closing brand card.")
     end_card_cta: str = Field(description="<=4 word call to action.")
 

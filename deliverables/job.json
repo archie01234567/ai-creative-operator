@@ -1,0 +1,338 @@
+{
+  "id": "20261121-071714-fad0",
+  "brief": {
+    "brand": "NomadGuard",
+    "product": "A travel-protection service designed for frequent travelers",
+    "target_audience": "Frequent travelers aged approximately 25-40",
+    "customer_problem": [
+      "flight delays, cancellations and travel disruptions create uncertainty",
+      "stress",
+      "unexpected financial loss"
+    ],
+    "core_message": "Travel with confidence knowing that you are protected when things go wrong.",
+    "brand_feel": [
+      "modern",
+      "premium",
+      "trustworthy",
+      "confident",
+      "visually polished"
+    ],
+    "platforms": [
+      "Instagram Reels",
+      "TikTok"
+    ],
+    "aspect_ratio": "9:16",
+    "min_seconds": 10,
+    "max_seconds": 15
+  },
+  "provider": "replicate",
+  "state": "NEEDS_REVIEW",
+  "created_at": "2026-11-20T23:17:14.822011Z",
+  "updated_at": "2026-11-20T23:34:14.648814Z",
+  "strategy": {
+    "angles": [
+      {
+        "name": "The Calm One",
+        "target_emotion": "Smug relief / aspiration",
+        "hook": "Packed airport gate at dusk, everyone slumped and frustrated in soft blur; one well-dressed traveler in sharp focus calmly sips coffee and smiles.",
+        "concept": "Departure board flickers red off-camera and the people around them groan. Our traveler shrugs, stands and strolls to a sleek hotel room. They drop onto the bed and watch planes from the window. Protection means a disruption becomes a free night, not a crisis.",
+        "cta": "Delays happen. Stress doesn't. Get NomadGuard.",
+        "hook_strength": 7,
+        "sound_off_clarity": 8,
+        "producibility": 7
+      },
+      {
+        "name": "Storm Window",
+        "target_emotion": "Tension to reassurance",
+        "hook": "Extreme close-up of a rain-lashed airport window, lightning flashing behind a grounded plane.",
+        "concept": "Pull back to a traveler watching the storm, jaw tight. A beat later their shoulders drop and they exhale. Cut to the same person stepping into a warm taxi under an umbrella held by a driver. The storm stays, the worry goes.",
+        "cta": "When the weather turns, you're covered. NomadGuard.",
+        "hook_strength": 8,
+        "sound_off_clarity": 7,
+        "producibility": 8
+      },
+      {
+        "name": "Suitcase Free-Fall",
+        "target_emotion": "Surprise / playful confidence",
+        "hook": "A premium suitcase tumbling in slow motion through open blue sky.",
+        "concept": "The suitcase falls, then lands softly on a giant pillow-like cloud that turns into a hotel bed where its owner relaxes. A visual metaphor for always landing safe, however the trip goes.",
+        "cta": "Always land safe. NomadGuard travel protection.",
+        "hook_strength": 9,
+        "sound_off_clarity": 5,
+        "producibility": 6
+      },
+      {
+        "name": "Empty Wallet Moment",
+        "target_emotion": "Fear of loss",
+        "hook": "A traveler at a rebooking desk, eyes widening as they look at something off-camera.",
+        "concept": "The implied cost of rebooking hits. Cut back and they're relaxed, walking away with a boarding pass. This relies on the viewer understanding prices and paperwork.",
+        "cta": "Don't pay for their delays. NomadGuard.",
+        "hook_strength": 6,
+        "sound_off_clarity": 4,
+        "producibility": 5
+      }
+    ],
+    "selected_angle": "Storm Window",
+    "selection_rationale": "It opens on a dramatic, instantly readable image of a cinematic storm and a grounded plane, and it shows the emotional payoff through body language and a warm rescue rather than screens or text. It balances hook strength, sound-off clarity and AI producibility better than the more abstract suitcase metaphor or the text-dependent wallet idea.",
+    "audience_insight": "Frequent travelers have all stared out a gate window at weather they can't control. What they dread isn't the delay itself but being stranded with no plan.",
+    "why_it_performs": "A lightning-lit plane is a thumb-stopping, universally recognized signal of a ruined trip, and the tension-to-relief arc lands in under 10 seconds with no audio. It positions NomadGuard as the premium, calm answer to a moment the audience has already lived."
+  },
+  "storyboard": {
+    "title": "Storm Window",
+    "protagonist": "A woman of about 32 with shoulder-length straight dark-brown hair tucked behind her ears and light natural makeup. She wears a knee-length camel wool coat over a cream ribbed turtleneck, slim black trousers and a small black leather crossbody bag on her left hip. She holds a black smartphone in her right hand. Wardrobe and props stay the same in every shot.",
+    "visual_style": "Photorealistic premium commercial in vertical 9:16, shot on a full-frame cinema camera with 50mm and 35mm prime lenses at shallow depth of field, with the face always in crisp focus. Storm exteriors are cool steel-blue and slate grey with occasional white lightning. Interiors are warm soft amber with gentle tungsten fill. The grade is clean with soft contrast, rich but natural skin tones and subtle film grain. Camera moves are slow and steady, with no handheld shake and no fast motion.",
+    "scenes": [
+      {
+        "duration": 3,
+        "description": "Hook. A close profile of the traveler at a floor-to-ceiling airport gate window streaming with rain. Lightning flashes behind a grounded jet on the dark tarmac. Her jaw is clenched, her brow is tight and her hand grips the strap of her crossbody bag.",
+        "camera": "Tight 50mm profile close-up with rain-streaked glass in the foreground and the plane soft in the background. A very slow push-in.",
+        "video_prompt": "Vertical close-up profile of a woman of about 32 with shoulder-length straight dark-brown hair tucked behind her ears, wearing a camel wool coat over a cream turtleneck. She stands inches from a huge airport window with heavy rain streaming down the glass. Beyond the glass a grounded passenger jet sits on a dark wet tarmac, and a bright lightning bolt flashes in the storm sky behind it, briefly lighting her face cool white. Her jaw is clenched, her brow is furrowed, and her right hand tightly grips the strap of a small black leather crossbody bag. Cool steel-blue storm light, shallow depth of field, face sharp, slow push-in, photorealistic, cinematic.",
+        "audio": "A sharp thunder crack on the lightning flash, heavy rain drumming on glass and a muffled terminal hum. A low, tense synth pulse begins."
+      },
+      {
+        "duration": 4,
+        "description": "The turn. Still at the window, she glances down at the phone in her hand and reads. Her shoulders visibly drop, she exhales slowly and her jaw unclenches into a small relieved half-smile.",
+        "camera": "35mm medium shot from slightly in front, framing her from the waist up with the rainy window and the plane soft behind her. Static, then a very slow drift in.",
+        "video_prompt": "Vertical medium shot of a woman of about 32 with shoulder-length straight dark-brown hair, wearing a camel wool coat over a cream turtleneck with a small black leather crossbody bag. She stands in a dim airport gate area in front of a rain-lashed window with a grounded jet blurred behind her in the storm. She looks down at a black smartphone in her right hand, reads for a moment, then her tense shoulders drop, she exhales a long slow breath and her face softens into a small relieved smile. The phone screen is turned away from the camera. Cool blue window light on one side and a soft warm terminal glow on her face, shallow depth of field, face in sharp focus, very slow push-in, photorealistic.",
+        "audio": "The rain softens in the mix and her audible exhale is heard. The tense pulse resolves into a warm, confident piano chord."
+      },
+      {
+        "duration": 4,
+        "description": "Relief. Outside the terminal at night in the rain, a driver holds a large black umbrella over her as she steps calmly into the open back door of a warmly lit taxi. The storm continues, but she is unhurried.",
+        "camera": "35mm medium-wide from curb level at a slight low angle. A slow lateral track follows her into the car.",
+        "video_prompt": "Vertical medium-wide shot at night outside an airport terminal in heavy rain. A woman of about 32 with shoulder-length straight dark-brown hair, wearing a camel wool coat, cream turtleneck and a small black leather crossbody bag, walks calmly to a dark sedan taxi with its rear door open and a warm amber interior glowing. A driver in a dark coat, seen only from the shoulders down, holds a large black umbrella over her head as she steps into the back seat with a relaxed expression. Rain falls through cool blue streetlight and wet pavement reflects the glow, shallow depth of field, her face sharp, slow lateral tracking move, photorealistic, cinematic.",
+        "audio": "Rain patters on the umbrella fabric, footsteps on wet pavement and a soft car-door thud. The warm piano theme builds gently."
+      },
+      {
+        "duration": 3,
+        "description": "Close. Inside the warm taxi she leans back into the seat, eyes relaxed, and gives a calm smile as rain beads softly on the side window and city lights blur into golden bokeh. The frame is clean and calm, with open space above her for the brand card.",
+        "camera": "50mm medium close-up from the opposite side of the back seat, framing her lower in the frame with soft, uncluttered space above. Locked off with a barely perceptible drift.",
+        "video_prompt": "Vertical medium close-up inside the back seat of a taxi at night. A woman of about 32 with shoulder-length straight dark-brown hair, wearing a camel wool coat over a cream turtleneck with a small black leather crossbody bag, leans back comfortably against the seat, relaxed, with a calm, content smile and soft eyes. Behind her, raindrops bead on the side window and warm golden city lights blur into large soft bokeh. Warm amber interior light glows evenly on her face, and the composition is clean and uncluttered with soft open space in the upper part of the frame. Shallow depth of field, face sharp, nearly static camera, photorealistic, premium cinematic look.",
+        "audio": "The rain is now distant and muffled and the car interior is quiet. The piano and soft strings land on a resolved, confident final note."
+      }
+    ],
+    "hook_super": "Grounded. Storm. Now what?",
+    "benefit_super": "Rebooked. Hotel covered.",
+    "benefit_shot": 2,
+    "end_card_headline": "When the weather turns, you're covered.",
+    "end_card_cta": "Get NomadGuard"
+  },
+  "render_mode": "single",
+  "tasks": [
+    {
+      "index": 0,
+      "prompt": "A 14-second vertical 9:16 premium commercial made of 4 shots joined by clean hard cuts. It follows one person through one short story.\nLOOK (identical in every shot): Photorealistic premium commercial in vertical 9:16, shot on a full-frame cinema camera with 50mm and 35mm prime lenses at shallow depth of field, with the face always in crisp focus. Storm exteriors are cool steel-blue and slate grey with occasional white lightning. Interiors are warm soft amber with gentle tungsten fill. The grade is clean with soft contrast, rich but natural skin tones and subtle film grain. Camera moves are slow and steady, with no handheld shake and no fast motion.\nPROTAGONIST (the same person in every shot): A woman of about 32 with shoulder-length straight dark-brown hair tucked behind her ears and light natural makeup. She wears a knee-length camel wool coat over a cream ribbed turtleneck, slim black trousers and a small black leather crossbody bag on her left hip. She holds a black smartphone in her right hand. Wardrobe and props stay the same in every shot.\n\nSHOT 1 (0s-3s): Vertical close-up profile of a woman of about 32 with shoulder-length straight dark-brown hair tucked behind her ears, wearing a camel wool coat over a cream turtleneck. She stands inches from a huge airport window with heavy rain streaming down the glass. Beyond the glass a grounded passenger jet sits on a dark wet tarmac, and a bright lightning bolt flashes in the storm sky behind it, briefly lighting her face cool white. Her jaw is clenched, her brow is furrowed, and her right hand tightly grips the strap of a small black leather crossbody bag. Cool steel-blue storm light, shallow depth of field, face sharp, slow push-in, photorealistic, cinematic. Camera: Tight 50mm profile close-up with rain-streaked glass in the foreground and the plane soft in the background. A very slow push-in. Sound: A sharp thunder crack on the lightning flash, heavy rain drumming on glass and a muffled terminal hum. A low, tense synth pulse begins.\nSHOT 2 (3s-7s): Vertical medium shot of a woman of about 32 with shoulder-length straight dark-brown hair, wearing a camel wool coat over a cream turtleneck with a small black leather crossbody bag. She stands in a dim airport gate area in front of a rain-lashed window with a grounded jet blurred behind her in the storm. She looks down at a black smartphone in her right hand, reads for a moment, then her tense shoulders drop, she exhales a long slow breath and her face softens into a small relieved smile. The phone screen is turned away from the camera. Cool blue window light on one side and a soft warm terminal glow on her face, shallow depth of field, face in sharp focus, very slow push-in, photorealistic. Camera: 35mm medium shot from slightly in front, framing her from the waist up with the rainy window and the plane soft behind her. Static, then a very slow drift in. Sound: The rain softens in the mix and her audible exhale is heard. The tense pulse resolves into a warm, confident piano chord.\nSHOT 3 (7s-11s): Vertical medium-wide shot at night outside an airport terminal in heavy rain. A woman of about 32 with shoulder-length straight dark-brown hair, wearing a camel wool coat, cream turtleneck and a small black leather crossbody bag, walks calmly to a dark sedan taxi with its rear door open and a warm amber interior glowing. A driver in a dark coat, seen only from the shoulders down, holds a large black umbrella over her head as she steps into the back seat with a relaxed expression. Rain falls through cool blue streetlight and wet pavement reflects the glow, shallow depth of field, her face sharp, slow lateral tracking move, photorealistic, cinematic. Camera: 35mm medium-wide from curb level at a slight low angle. A slow lateral track follows her into the car. Sound: Rain patters on the umbrella fabric, footsteps on wet pavement and a soft car-door thud. The warm piano theme builds gently.\nSHOT 4 (11s-14s): Vertical medium close-up inside the back seat of a taxi at night. A woman of about 32 with shoulder-length straight dark-brown hair, wearing a camel wool coat over a cream turtleneck with a small black leather crossbody bag, leans back comfortably against the seat, relaxed, with a calm, content smile and soft eyes. Behind her, raindrops bead on the side window and warm golden city lights blur into large soft bokeh. Warm amber interior light glows evenly on her face, and the composition is clean and uncluttered with soft open space in the upper part of the frame. Shallow depth of field, face sharp, nearly static camera, photorealistic, premium cinematic look. Camera: 50mm medium close-up from the opposite side of the back seat, framing her lower in the frame with soft, uncluttered space above. Locked off with a barely perceptible drift. Sound: The rain is now distant and muffled and the car interior is quiet. The piano and soft strings land on a resolved, confident final note.\n\nThe final shot holds on a calm, uncluttered composition until the very last frame.\nPhotorealistic live-action commercial footage, natural skin texture, anatomically correct hands and faces, physically plausible motion. No on-screen text, captions, subtitles, logos, watermarks or user-interface graphics anywhere in frame; any signage or screens are out of focus and unreadable. No spoken dialogue or voice-over.\nNotes from the review of the previous render. Fix them in the footage itself; still render no text, captions or readable screens:\n- Open on an extreme close-up of rain streaming down a terminal window, with a bright lightning flash already visible in the first frame behind a grounded plane seen through the glass. Then pull back to reveal the woman.\n- In the car-arrival shot, have the driver clearly gripping the umbrella's single straight shaft in one hand and holding it directly over the woman's head as she bends into the back seat. The umbrella should have one handle only and must never be shown unsupported.\n- Keep the woman visible in every car shot: show her stepping into the warm, amber-lit back seat while the driver shelters her. Do not cut to the driver alone.\n- Keep the protagonist's hair identical in every shot: deep dark-brown, straight, shoulder-length, tucked behind both ears, with no auburn or lighter tones even under warm interior or street lighting.",
+      "duration": 14,
+      "uses_reference": false,
+      "status": "SUCCEEDED",
+      "attempts": [
+        {
+          "number": 1,
+          "provider_job_id": "3213rqsx15rmy0d1zd6svqn7tw|jobs\\20261121-071714-fad0\\clips\\round2_clip1_try1.mp4",
+          "started_at": "2026-11-20T23:31:44.813830Z",
+          "ended_at": "2026-11-20T23:33:46.611150Z",
+          "error_kind": null,
+          "error": null,
+          "hint": null
+        }
+      ],
+      "not_before": null,
+      "output_path": "jobs\\20261121-071714-fad0\\clips\\round2_clip1_try1.mp4"
+    }
+  ],
+  "qa_round": 2,
+  "qa_feedback": [
+    "Open on an extreme close-up of rain streaming down a terminal window, with a bright lightning flash already visible in the first frame behind a grounded plane seen through the glass. Then pull back to reveal the woman.",
+    "In the car-arrival shot, have the driver clearly gripping the umbrella's single straight shaft in one hand and holding it directly over the woman's head as she bends into the back seat. The umbrella should have one handle only and must never be shown unsupported.",
+    "Keep the woman visible in every car shot: show her stepping into the warm, amber-lit back seat while the driver shelters her. Do not cut to the driver alone.",
+    "Keep the protagonist's hair identical in every shot: deep dark-brown, straight, shoulder-length, tucked behind both ears, with no auburn or lighter tones even under warm interior or street lighting."
+  ],
+  "final_video": "jobs\\20261121-071714-fad0\\final_round2.mp4",
+  "qa": {
+    "technical": {
+      "exists": true,
+      "playable": true,
+      "duration": 14.0,
+      "resolution": "1080x1920",
+      "aspect_ratio": "9:16",
+      "fps": 30.0,
+      "video_codec": "h264",
+      "has_audio": true,
+      "valid": true,
+      "failures": [],
+      "warnings": []
+    },
+    "creative": {
+      "skipped_reason": null,
+      "scores": {
+        "observed_defects": [
+          "0.1s: airline livery on fuselage is garbled pseudo-text ('F4 ...' squiggles) and tail logo is a malformed glyph; the blurred woman's face in left foreground is soft and smeared.",
+          "0.1s vs 0.8s: the hook is not an extreme close-up of rain-lashed glass. The first frame is a wide shot of a clear window with no raindrops, and raindrops suddenly appear by 0.8s.",
+          "3.0s: the lightning bolt is an unnatural flat pink/magenta streak that looks painted on, not a real lightning flash.",
+          "4.5s/5.7s: the tail logo is again a garbled shape. Her eyes are downcast, nearly closed, with a slightly glassy, plastic skin look. The coat sleeve buttons render as a smeared cluster.",
+          "4.5s/5.7s: the brief says the phone is held in the right hand. She holds it in her left-of-frame hand, which is anatomically her right, so this is acceptable. But the crossbody bag hangs at her right hip here, while the brief places it on her left hip.",
+          "8.3s: the car door pocket/interior is fine, but the umbrella is held by a disembodied arm entering from the frame edge. She walks past the open door rather than toward it, and the umbrella is not over her, so she is walking in heavy rain unprotected.",
+          "10.9s: the driver holds the umbrella over empty space, not over her or the door. The 'taxi' is an unmarked private sedan. The rain streaming off the umbrella forms thick unnatural ropes.",
+          "10.9s: the woman's leg/foot at the door sill is bare-looking with a heel, inconsistent with the slim black trousers seen at 8.3s.",
+          "13.6s: the brand card is legible and well placed. The 'shoulders drop, exhale' relief beat is carried only by the 4.5-5.7s phone shot, where her expression reads as tired or sad rather than relieved.",
+          "Captions: the opening 'Grounded. Storm. Now what?' and 'Rebooked. Hotel covered.' are legible and well placed. But 'Hotel covered' is followed by a taxi ride with no hotel shown, a mild story mismatch."
+        ],
+        "shot_by_shot": [
+          "0.1s: wide shot through a terminal window of a grounded blue-and-white jet on wet tarmac under purple lightning. A blurred woman's profile is at the left edge. Caption 'Grounded. Storm. Now what?'",
+          "0.8s: the woman in profile (dark hair, camel coat, cream turtleneck) looks out a rain-speckled window at the plane, clutching her bag strap. Same caption.",
+          "1.8s: similar profile, slightly further back, with brighter purple light over the tarmac. Same caption.",
+          "3.0s: closer profile, worried expression, with a pink lightning streak behind the plane. No caption.",
+          "4.5s: medium front shot of the woman looking down at a black phone, the plane behind her through the glass. Caption 'Rebooked. Hotel covered.'",
+          "5.7s: nearly identical to 4.5s, eyes almost closed, slight smile. Same caption.",
+          "8.3s: night exterior in heavy rain. The woman, seen from behind, walks toward a dark blue sedan with an open door and tan interior while an arm holds an umbrella from the right edge.",
+          "10.9s: the woman is seated in the sedan's back seat with the door open. A man in a dark coat stands beside the car holding an umbrella in the rain.",
+          "13.6s: a dim interior of the woman smiling in the car, rain on the window. Brand card 'NomadGuard', 'When the weather turns, you're covered.', button 'Get NomadGuard'."
+        ],
+        "realism": 5,
+        "visual_consistency": 7,
+        "brief_adherence": 6,
+        "hook_strength": 6,
+        "advertising_quality": 6,
+        "fix_suggestions": [
+          "Open on a true extreme close-up of rain streaming down an airport window, with a lightning flash illuminating a plain white plane with no markings behind the glass. Keep raindrops on the glass from the very first frame, then slowly pull back to reveal the woman's profile.",
+          "Render the lightning as a natural bright white-blue bolt that briefly lights the whole tarmac, not a coloured streak.",
+          "Use a plain white aircraft with no lettering or tail logo to avoid garbled livery.",
+          "After she looks at her phone, show a clear relief beat: eyes open, her shoulders visibly drop, she exhales, and a soft smile appears while she still looks at the dark phone screen.",
+          "At the car, have a driver in a dark coat hold a large black umbrella directly over the woman's head as she steps into a clearly marked dark taxi. Keep her slim black trousers and the small black crossbody bag on her left hip visible.",
+          "Keep the driver fully in frame as a whole person; avoid a disembodied arm entering from the frame edge."
+        ]
+      },
+      "mean_score": 6.0,
+      "passed": false,
+      "failures": [
+        "realism scored 5 (minimum 6)",
+        "mean score 6.0 is below 7.0"
+      ],
+      "frames": [
+        "jobs\\20261121-071714-fad0\\frames_round2\\frame_00_00.10s.jpg",
+        "jobs\\20261121-071714-fad0\\frames_round2\\frame_01_00.80s.jpg",
+        "jobs\\20261121-071714-fad0\\frames_round2\\frame_02_01.80s.jpg",
+        "jobs\\20261121-071714-fad0\\frames_round2\\frame_03_03.00s.jpg",
+        "jobs\\20261121-071714-fad0\\frames_round2\\frame_04_04.50s.jpg",
+        "jobs\\20261121-071714-fad0\\frames_round2\\frame_05_05.65s.jpg",
+        "jobs\\20261121-071714-fad0\\frames_round2\\frame_06_08.30s.jpg",
+        "jobs\\20261121-071714-fad0\\frames_round2\\frame_07_10.95s.jpg",
+        "jobs\\20261121-071714-fad0\\frames_round2\\frame_08_13.60s.jpg"
+      ]
+    },
+    "passed": false
+  },
+  "error": null,
+  "events": [
+    {
+      "at": "2026-11-20T23:17:14.822011Z",
+      "state": "CREATED",
+      "message": "Job created."
+    },
+    {
+      "at": "2026-11-20T23:17:14.837103Z",
+      "state": "PLANNING",
+      "message": "Planning creative strategy."
+    },
+    {
+      "at": "2026-11-20T23:17:30.144552Z",
+      "state": "PLANNING",
+      "message": "4 angles proposed; selected 'Storm Window'."
+    },
+    {
+      "at": "2026-11-20T23:17:59.645043Z",
+      "state": "PLANNING",
+      "message": "Storyboard 'Storm Window': 4 shots, 14s."
+    },
+    {
+      "at": "2026-11-20T23:17:59.646120Z",
+      "state": "GENERATING",
+      "message": "Generating video (single)."
+    },
+    {
+      "at": "2026-11-20T23:18:01.641543Z",
+      "state": "GENERATING",
+      "message": "Clip 1: submitted (attempt 1)."
+    },
+    {
+      "at": "2026-11-20T23:21:13.572954Z",
+      "state": "GENERATING",
+      "message": "Clip 1: ready."
+    },
+    {
+      "at": "2026-11-20T23:21:13.575459Z",
+      "state": "ASSEMBLING",
+      "message": "All clips generated; assembling."
+    },
+    {
+      "at": "2026-11-20T23:21:21.767995Z",
+      "state": "EVALUATING",
+      "message": "Assembled; running QA."
+    },
+    {
+      "at": "2026-11-20T23:21:49.825210Z",
+      "state": "GENERATING",
+      "message": "QA rejected the render (realism scored 5 (minimum 6); brief_adherence scored 5 (minimum 6); hook_strength scored 5 (minimum 6); advertising_quality scored 5 (minimum 6); mean score 5.2 is below 7.0). Re-rendering with feedback (round 1 of 1)."
+    },
+    {
+      "at": "2026-11-20T23:21:50.226424Z",
+      "state": "GENERATING",
+      "message": "Clip 1: submitted (attempt 1)."
+    },
+    {
+      "at": "2026-11-20T23:23:51.474208Z",
+      "state": "GENERATING",
+      "message": "Clip 1: ready."
+    },
+    {
+      "at": "2026-11-20T23:23:51.478253Z",
+      "state": "ASSEMBLING",
+      "message": "All clips generated; assembling."
+    },
+    {
+      "at": "2026-11-20T23:23:59.295627Z",
+      "state": "EVALUATING",
+      "message": "Assembled; running QA."
+    },
+    {
+      "at": "2026-11-20T23:24:29.244971Z",
+      "state": "NEEDS_REVIEW",
+      "message": "Asset needs human review: realism scored 5 (minimum 6); hook_strength scored 5 (minimum 6); mean score 5.8 is below 7.0"
+    },
+    {
+      "at": "2026-11-20T23:31:10.423915Z",
+      "state": "EVALUATING",
+      "message": "Reopened at EVALUATING."
+    },
+    {
+      "at": "2026-11-20T23:31:44.811787Z",
+      "state": "GENERATING",
+      "message": "QA rejected the render (realism scored 5 (minimum 6); mean score 5.8 is below 7.0). Re-rendering with feedback (round 2 of 2)."
+    },
+    {
+      "at": "2026-11-20T23:31:45.191092Z",
+      "state": "GENERATING",
+      "message": "Clip 1: submitted (attempt 1)."
+    },
+    {
+      "at": "2026-11-20T23:33:46.612152Z",
+      "state": "GENERATING",
+      "message": "Clip 1: ready."
+    },
+    {
+      "at": "2026-11-20T23:33:46.614663Z",
+      "state": "ASSEMBLING",
+      "message": "All clips generated; assembling."
+    },
+    {
+      "at": "2026-11-20T23:33:54.057710Z",
+      "state": "EVALUATING",
+      "message": "Assembled; running QA."
+    },
+    {
+      "at": "2026-11-20T23:34:14.648814Z",
+      "state": "NEEDS_REVIEW",
+      "message": "Asset needs human review: realism scored 5 (minimum 6); mean score 6.0 is below 7.0"
+    }
+  ]
+}

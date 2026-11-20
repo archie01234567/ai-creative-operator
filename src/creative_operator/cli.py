@@ -81,7 +81,7 @@ def main(argv: list[str] | None = None) -> int:
         if args.command == "resume":
             previous = store.load(args.job_id)
             pipeline = _pipeline(args, settings, store, default_provider=previous.provider)
-            return _finish(pipeline.run(args.job_id), store)
+            return _finish(pipeline.run(args.job_id, new_take=bool(args.clips)), store)
         if args.command == "status":
             job = store.load(args.job_id)
             print(job.model_dump_json(indent=2) if args.json else _summary(job))

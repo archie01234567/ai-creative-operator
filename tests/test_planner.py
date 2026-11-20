@@ -57,3 +57,29 @@ def test_render_plan_adapts_to_provider_capabilities(fixture_json):
     assert [t.uses_reference for t in tasks] == [False, True, True, True]
     assert all(t.duration >= 4 for t in tasks)
     assert all(board.protagonist in t.prompt and "hands look warped" in t.prompt for t in tasks)
+
+
+def test_replicate_input_is_built_from_the_models_own_schema(tmp_path):
+    from creative_operator.providers.base import GenerationRequest
+    from creative_operator.providers.replicate import ReplicateProvider, _duration_range
+
+    provider = ReplicateProvider.__new__(ReplicateProvider)  # no network: schema injected
+    provider.schema = {
+        "prompt": {"type": "string"},
+        "duration": {"type": "integer", "enum": [5, 10]},
+        "aspect_ratio": {"enum": ["16:9", "9:16"]},
+        "resolution": {"enum": ["480p", "720p"], "default": "720p"},
+    }
+    request = GenerationRequest(
+        prompt="p", duration=7, output_path=tmp_path / "a.mp4", resolution="1080p",
+        reference_images=[tmp_path / "ref.jpg"],
+    )  # fmt: skip
+
+    assert provider.build_input(request) == {
+        "prompt": "p",
+        "duration": 10,  # shortest accepted length that covers the shot
+        "aspect_ratio": "9:16",
+        "resolution": "720p",  # unsupported 1080p falls back to the model default
+    }  # and no reference field, because this model does not declare one
+    assert _duration_range(provider.schema["duration"]) == (5, 10)
+    assert _duration_range({"minimum": 3, "maximum": 20}) == (3, 20)
