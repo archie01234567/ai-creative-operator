@@ -1,0 +1,38 @@
+{
+  "angles": [
+    {
+      "name": "The Calm One",
+      "target_emotion": "Composed confidence, with a little envy from everyone else",
+      "hook": "A terminal washed in red warning light; everyone rushes past one woman who has not moved and is quietly smiling.",
+      "concept": "When the flight is cancelled the whole gate panics except one traveler. She exhales, puts her headphones on and walks the other way to a quiet lounge. Being protected looks like calm.",
+      "cta": "Travel protected",
+      "hook_strength": 8,
+      "sound_off_clarity": 9,
+      "producibility": 8
+    },
+    {
+      "name": "The Receipt",
+      "target_emotion": "Relief from financial dread",
+      "hook": "A traveler's hands fan out a stack of rebooking receipts on a hotel bed at 2am.",
+      "concept": "The hidden cost of a cancellation, itemised, then wiped away when a refund lands. Protection as money back.",
+      "cta": "Get covered",
+      "hook_strength": 6,
+      "sound_off_clarity": 5,
+      "producibility": 3
+    },
+    {
+      "name": "Plan B Is Already Booked",
+      "target_emotion": "Feeling looked after",
+      "hook": "A man asleep on airport seats is woken by sunrise through the glass, and he is the last one left at the gate.",
+      "concept": "The stranded-overnight nightmare cut against the protected traveler waking up in a hotel bed, already rebooked.",
+      "cta": "Never get stranded",
+      "hook_strength": 7,
+      "sound_off_clarity": 7,
+      "producibility": 6
+    }
+  ],
+  "selected_angle": "The Calm One",
+  "selection_rationale": "It shows the benefit as a feeling in one image instead of explaining a policy, and the contrast between panic and calm reads instantly with the sound off. It also avoids screens, text and receipts, which AI video cannot render convincingly.",
+  "audience_insight": "Frequent travelers do not fear the delay itself; they fear the scramble that follows it, and they quietly admire the person at the gate who clearly already has it handled.",
+  "why_it_performs": "A red-lit crowd rushing past a still, smiling face is a pattern interrupt in the first second, and the viewer stays to find out why she is calm. The answer is the brand, so the payoff and the product are the same beat."
+}

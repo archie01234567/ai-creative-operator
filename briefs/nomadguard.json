@@ -1,0 +1,16 @@
+{
+  "brand": "NomadGuard",
+  "product": "A travel-protection service designed for frequent travelers",
+  "target_audience": "Frequent travelers aged approximately 25-40",
+  "customer_problem": [
+    "flight delays, cancellations and travel disruptions create uncertainty",
+    "stress",
+    "unexpected financial loss"
+  ],
+  "core_message": "Travel with confidence knowing that you are protected when things go wrong.",
+  "brand_feel": ["modern", "premium", "trustworthy", "confident", "visually polished"],
+  "platforms": ["Instagram Reels", "TikTok"],
+  "aspect_ratio": "9:16",
+  "min_seconds": 10,
+  "max_seconds": 15
+}

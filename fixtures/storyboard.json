@@ -1,0 +1,38 @@
+{
+  "title": "The Calm One",
+  "protagonist": "A woman in her early thirties with shoulder-length dark brown hair, light olive skin, wearing a camel wool coat over a black turtleneck, with matte black over-ear headphones around her neck and a small charcoal carry-on.",
+  "visual_style": "Premium cinematic commercial, shallow depth of field on a 50mm lens, soft diffused light, deep navy and warm amber palette, gentle film grain, clean modern airport architecture.",
+  "scenes": [
+    {
+      "duration": 3,
+      "description": "Red warning light floods the gate. Travelers rush past in a blur. She sits perfectly still and a small knowing smile appears.",
+      "camera": "Tight close-up on her face, slow push in, background figures streaking past in motion blur.",
+      "video_prompt": "Close-up of the woman seated at an airport gate, her face lit by pulsing red light from an out-of-focus departures board, anxious travelers hurrying past behind her as soft motion-blurred shapes. She stays perfectly still, slowly exhales, and a small confident smile forms.",
+      "audio": "Muffled terminal chaos and an alarm-like tone, ducking under a low calm synth note as she smiles."
+    },
+    {
+      "duration": 3,
+      "description": "She lifts her headphones on and the noise of the terminal falls away.",
+      "camera": "Medium close-up in profile, steady, slight handheld breathing.",
+      "video_prompt": "Profile medium close-up of the woman calmly raising matte black over-ear headphones onto her ears, eyes closing for a moment, the red light on her face softening to warm amber as the blurred crowd thins behind her.",
+      "audio": "The chaos drops to near silence; a warm minimal piano motif begins."
+    },
+    {
+      "duration": 3,
+      "description": "She walks unhurried against the flow of the crowd, carry-on gliding beside her.",
+      "camera": "Tracking shot from in front at waist height, moving backwards with her.",
+      "video_prompt": "The woman walks calmly toward camera through a bright modern airport concourse, pulling a small charcoal carry-on, while other travelers hurry in the opposite direction past her. She is relaxed and unhurried, warm daylight from tall windows.",
+      "audio": "Piano motif builds gently, soft footsteps."
+    },
+    {
+      "duration": 4,
+      "description": "A quiet lounge at golden hour. She settles into an armchair by the window as a plane climbs outside.",
+      "camera": "Wide shot, slow dolly back, she sits in the lower third with open sky above.",
+      "video_prompt": "Wide shot of a quiet premium airport lounge at golden hour. The woman settles into a leather armchair beside a floor-to-ceiling window with a cup of coffee, looking out as a plane climbs into a soft amber sky. Calm, spacious, uncluttered composition.",
+      "audio": "Piano resolves on a warm sustained chord, faint distant jet."
+    }
+  ],
+  "hook_super": "Flight cancelled. She's fine.",
+  "end_card_headline": "Protected when things go wrong.",
+  "end_card_cta": "Travel protected"
+}

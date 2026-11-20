@@ -1,0 +1,27 @@
+[project]
+name = "creative-operator"
+version = "0.1.0"
+description = "Brief -> strategy -> storyboard -> AI video -> QA pipeline for short social ads"
+requires-python = ">=3.12"
+dependencies = [
+    "anthropic>=2.10.0",
+    "google-genai>=3.6.1",
+    "pillow>=13.0.0",
+    "pydantic>=2.14.4",
+    "python-dotenv>=1.2.4",
+]
+
+[project.scripts]
+creative-operator = "creative_operator.cli:main"
+
+[build-system]
+requires = ["uv_build>=0.12.10,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
